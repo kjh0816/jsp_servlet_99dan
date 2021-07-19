@@ -8,6 +8,17 @@
 </head>
 <body>
 <%
+
+if(request.getParameter("dan") == null) {
+	response.getWriter().append("dan을 입력해주세요.");
+	return;
+}
+
+if(request.getParameter("limit") == null) {
+	response.getWriter().append("limit을 입력해주세요.");
+	return;
+}	
+
 	int dan = Integer.parseInt(request.getParameter("dan"));
 	int limit = Integer.parseInt(request.getParameter("limit"));
 %>
